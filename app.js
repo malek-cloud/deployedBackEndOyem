@@ -83,7 +83,7 @@ app.use((error, req, res, next) => {
 mongoose
 
   .connect(
-    'mongodb+srv://malek-01:kisstherain@cluster0.2mjlv.mongodb.net/OyemUnity?retryWrites=true&w=majority',
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_USER}@cluster0.2mjlv.mongodb.net/${process.env.DB_USER}?retryWrites=true&w=majority`,
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(result => {
